@@ -30,18 +30,32 @@ The design is intended for **FPGA/ASIC simulation and synthesis** and can be use
 
 ## File Structure
 
-| File                         | Description                                     |
-| ---------------------------- | ----------------------------------------------- |
-| `key_top_module_16_rounds.v` | Top-level module for 16-round key generation    |
-| `key_pc1.v`                  | Parity-drop (PC-1) module                       |
-| `key_split_28.v`             | Splits 56-bit key into C0 & D0                  |
-| `key_after_round1.v`         | Left shift module for each round                |
-| `key_pc2.v`                  | Compression permutation (PC-2) to 48-bit subkey |
-| `des_top_module.v`           | Top-level DES encryption module                 |
-| `des_round.v`                | Single DES round function (f-function)          |
-| `tb_des.v`                   | Testbench for verifying DES encryption          |
-
----
+| File | Description |
+|------|-------------|
+| `top_module.v` | Top-level module for DES encryption |
+| `key_top_module_16_rounds.v` | 16-round key generation top module |
+| `key_pc1.v` | Parity-drop (PC-1) module |
+| `key_split_28.v` | Splits 56-bit key into C0 & D0 |
+| `key_after_round1.v` | Left shift module for each round |
+| `key_left_shift_28.v` | Handles left shifts for key schedule |
+| `key_pc2.v` | Compression permutation (PC-2) to 48-bit subkey |
+| `des_round.v` | Single DES round function (f-function) |
+| `s-box_module.v` | S-box substitution module |
+| `sbox1.v` | S-box 1 implementation |
+| `sbox2.v` | S-box 2 implementation |
+| `sbox3.v` | S-box 3 implementation |
+| `sbox4.v` | S-box 4 implementation |
+| `sbox5.v` | S-box 5 implementation |
+| `sbox6.v` | S-box 6 implementation |
+| `sbox7.v` | S-box 7 implementation |
+| `sbox8.v` | S-box 8 implementation |
+| `pbox_permutation.v` | P-box permutation module |
+| `initial_permutation.v` | Initial permutation (IP) module |
+| `final_permutation.v` | Final permutation (IP⁻¹) module |
+| `expansion_permutation.v` | Expansion (E) module for DES rounds |
+| `data_split_32_bit.v` | Splits 64-bit data into 32-bit halves |
+| `xor_logic.v` | XOR logic module for DES f-function |
+| `tb_des.v` | Testbench for verifying DES encryption |
 
 ## How DES Works (Summary)
 
