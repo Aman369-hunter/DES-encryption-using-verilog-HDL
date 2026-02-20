@@ -123,27 +123,15 @@ endmodule
 
 ## References
 
-* FIPS PUB 46-3: Data Encryption Standard (DES) specification
-* [Verilog HDL Reference](https://www.verilog.com/)
-* Practical FPGA DES implementations and tutorials
+* [Verilog HDL Reference](https://www.verilog.com/
 
 ---
 
 ## Author
 
-**Anil Kumar** – Final Year ECE Student
+**Aman** – ECE Student
 
 * GitHub: [Aman369-hunter](https://github.com/Aman369-hunter)
-* Email: *[Your Email]*
+* Email: *jollyllb852965@gmail.com*
 
 ---
-
-## License
-
-This project is licensed under **MIT License** – see the LICENSE file for details.
-
----
-
-I can also **make a shorter, eye-catching version** with **shields for language, license, and build status** so it looks very professional on GitHub if you want.
-
-Do you want me to do that?
